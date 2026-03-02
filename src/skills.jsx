@@ -167,7 +167,7 @@ function SkillPill({ item, color, bg, index, visible }) {
       <span style={{
         fontSize: '0.75rem', fontWeight: 600,
         color: hovered ? '#f1f5f9' : '#64748b',
-        fontFamily: "'Outfit', sans-serif",
+        fontFamily: "'Sora', sans-serif",
         transition: 'color 0.3s', letterSpacing: '0.01em',
       }}>
         {item.name}
@@ -222,7 +222,7 @@ function Panel({ catName, cat, panelIndex, visible }) {
         </div>
         <h3 style={{
           margin: 0, flex: 1, fontSize: '0.95rem', fontWeight: 700,
-          color: '#e2e8f0', letterSpacing: '-0.02em', fontFamily: "'Outfit', sans-serif",
+          color: '#e2e8f0', letterSpacing: '-0.02em', fontFamily: "'Sora', sans-serif",
         }}>
           {catName}
         </h3>
@@ -343,7 +343,7 @@ function EduNode({ entry, index, visible, isLast }) {
               <h3 style={{
                 margin: '0 0 4px', fontSize: '1rem', fontWeight: 700,
                 color: '#f1f5f9', letterSpacing: '-0.02em',
-                fontFamily: "'Outfit', sans-serif", lineHeight: 1.3,
+                fontFamily: "'Sora', sans-serif", lineHeight: 1.3,
               }}>
                 {entry.degree}
               </h3>
@@ -352,7 +352,7 @@ function EduNode({ entry, index, visible, isLast }) {
               }}>
                 <span style={{
                   fontSize: '0.75rem', color: entry.color, fontWeight: 600,
-                  fontFamily: "'Outfit', sans-serif",
+                  fontFamily: "'Sora', sans-serif",
                 }}>
                   {entry.institution}
                 </span>
@@ -388,7 +388,7 @@ function EduNode({ entry, index, visible, isLast }) {
           {/* Description */}
           <p style={{
             margin: '10px 0 12px', fontSize: '0.8rem', color: '#475569',
-            lineHeight: 1.7, fontFamily: "'Outfit', sans-serif", fontWeight: 400,
+            lineHeight: 1.7, fontFamily: "'Sora', sans-serif", fontWeight: 400,
           }}>
             {entry.description}
           </p>
@@ -411,7 +411,7 @@ function ToggleButton({ label, active, onClick, icon }) {
         border: active ? '1px solid rgba(255,255,255,0.2)' : '1px solid rgba(255,255,255,0.07)',
         background: active ? 'rgba(255,255,255,0.1)' : 'transparent',
         color: active ? '#f1f5f9' : '#475569',
-        fontFamily: "'Outfit', sans-serif",
+        fontFamily: "''Sora', sans-serif",
         fontSize: '1rem', fontWeight: 600,
         letterSpacing: '0.01em',
         transition: 'all 0.25s ease',
@@ -445,7 +445,7 @@ export default function SkillsSection() {
     <section ref={sectionRef} id="skills" style={{
       padding: '8rem 5% 9rem',
       maxWidth: '1240px', margin: '0 auto',
-      position: 'relative', fontFamily: "'Outfit', sans-serif",
+      position: 'relative', fontFamily: "'Sora', sans-serif",
     }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
@@ -506,7 +506,7 @@ export default function SkillsSection() {
           <h2 style={{
             margin:0, position:'relative', zIndex:1, marginBottom: 40,
             fontSize: 'clamp(2.2rem, 4.5vw, 3.2rem)', fontWeight: 900, letterSpacing: '-0.05em', lineHeight: 1, color: '#fff',
-            fontFamily:"'Outfit', sans-serif", padding:'0.2em 0.4em',
+            fontFamily: "'Sora', sans-serif", padding:'0.2em 0.4em',
           }}>
             <span style={{ color:'#f8fafc' }}>
               {activeTab === 'skills' ? 'Technical ' : 'Educational '}
@@ -596,7 +596,7 @@ export default function SkillsSection() {
                           )}
                           <span style={{
                             fontSize:'0.68rem', fontWeight:600, color:'#94a3b8',
-                            letterSpacing:'0.05em', fontFamily:"'JetBrains Mono', monospace",
+                            letterSpacing:'0.05em', fontFamily:"'Sora', sans-serif",
                           }}>
                             {item.name}
                           </span>

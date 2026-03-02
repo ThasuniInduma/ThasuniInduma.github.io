@@ -434,12 +434,12 @@ export default function Projects() {
         <div style={{ marginBottom: '3rem', textAlign: 'center' }}>
           <h2 style={{
             fontSize: 'clamp(2.2rem, 4.5vw, 3.2rem)', fontWeight: 900,
-            letterSpacing: '-0.05em', lineHeight: 1, color: '#fff',
+            letterSpacing: '-0.05em', lineHeight: 1, color: '#fff', fontFamily: "'Sora', sans-serif"
           }}>
             Featured{' '}
             <span style={{
-              background: 'linear-gradient(135deg, #7dc4ff 0%, #5eadf7 50%, #3b82f6 100%)',
-              WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
+              background: 'linear-gradient(135deg, #7dc4ff 0%, #5eadf7 50%, #3b82f6 100%)', 
+              WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', 
             }}>
               Projects
             </span>

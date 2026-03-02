@@ -54,20 +54,6 @@ const achievements = [
   },
   {
     id: 4,
-    rank: "Top 10 Selected",
-    rankNum: "04",
-    event: "KelaniXtreme",
-    org: "IEEE Student Branch, University of Kelaniya",
-    year: "2024",
-    color: BLUE,
-    colorDim: BLUE_DIM,
-    colorGlow: BLUE_GLOW,
-    desc: "Ranked in the top 10 teams in this technology challenge, demonstrating technical expertise, creativity, and the ability to present a compelling solution in a highly competitive environment.",
-    tags: ["Tech Challenge", "Top 10", "IEEE", "University"],
-    img: a4,
-  },
-  {
-    id: 5,
     rank: "Top 10 Finalists",
     rankNum: "05",
     event: "Junior Hack 7.0",
@@ -121,7 +107,7 @@ function ImagePanel({ ach }) {
       }} />
       <div style={{
         position: 'relative', zIndex: 2,
-        fontFamily: "'Outfit', sans-serif",
+        fontFamily: "'Sora', sans-serif",
         fontSize: '6rem', fontWeight: 900, lineHeight: 1,
         background: GRADIENT,
         WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
@@ -265,7 +251,7 @@ export default function Achievements() {
 
         .tag-pill {
           padding: 4px 13px; border-radius: 2px;
-          font-family: fontFamily: "'Outfit', sans-serif";
+          font-family: fontFamily: "'Sora', sans-serif";
           font-size: 0.56rem; font-weight: 600;
           letter-spacing: 0.14em; text-transform: uppercase;
           border: 1px solid rgba(94,173,247,0.22);
@@ -335,7 +321,7 @@ export default function Achievements() {
         style={{
           padding: '7rem 5% 8rem',
           maxWidth: '1320px', margin: '0 auto',
-          fontFamily: "'Outfit', sans-serif",
+          fontFamily: "'Sora', sans-serif",
           background: 'transparent',
         }}
         onMouseEnter={() => setPaused(true)}
@@ -347,7 +333,7 @@ export default function Achievements() {
           <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'center', flexWrap: 'wrap', gap: 16 }}>
             <h2 style={{
               margin: 0,
-              fontFamily: "'Outfit', sans-serif",
+              fontFamily: "'Sora', sans-serif",
               fontSize: 'clamp(2.2rem, 4.5vw, 3.2rem)',
               fontWeight: 900, letterSpacing: '-0.05em', lineHeight: 1,
             }}>
@@ -441,7 +427,7 @@ export default function Achievements() {
             {/* Rank + title + org */}
             <div className="reveal-1">
               <div style={{
-                fontFamily: "'Outfit', sans-serif",
+                fontFamily: "'Sora', sans-serif",
                 fontSize: '1.5rem', fontWeight: 700,
                 letterSpacing: '0.22em', textTransform: 'uppercase',
                 background: GRADIENT,
@@ -450,13 +436,13 @@ export default function Achievements() {
                 marginBottom: '0.6rem',
               }}>{ach.rank}</div>
               <h3 style={{
-                fontFamily: "'Outfit', sans-serif",
+                fontFamily: "'Sora', sans-serif",
                 fontSize: 'clamp(1.7rem, 3vw, 2.4rem)',
                 fontWeight: 900, letterSpacing: '-0.04em',
                 color: '#f1f5f9', lineHeight: 1.1, margin: '0 0 0.3rem',
               }}>{ach.event}</h3>
               <p style={{
-                fontFamily: "'Outfit', sans-serif",
+                fontFamily: "'Sora', sans-serif",
                 fontSize: '1.2rem', color: '#475569',
                 fontWeight: 400, margin: 0, letterSpacing: '0.01em',
               }}>{ach.org}</p>
@@ -470,7 +456,7 @@ export default function Achievements() {
 
             {/* Desc */}
             <p className="reveal-3" style={{
-              fontFamily: "'Outfit', sans-serif",
+              fontFamily: "'Sora', sans-serif",
               fontSize: '1rem', color: '#475569',
               lineHeight: 1.85, fontWeight: 400, margin: 0,
             }}>{ach.desc}</p>
