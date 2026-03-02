@@ -436,8 +436,6 @@ export default function Achievements() {
                 <div className="corner corner-bl" />
                 <div className="corner corner-br" />
 
-                {/* Scan lines */}
-                <div className="scan-overlay" />
 
                 {/* Slide stage — clipped inside fixed box */}
                 <div style={{ position: 'absolute', inset: 0, overflow: 'hidden', borderRadius: 4, background: '#070914', zIndex: 2 }}>
