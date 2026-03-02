@@ -115,7 +115,7 @@ const projects = [
     category: "Web Application",
     type: "web",
     desc: "Built a responsive food ordering platform with real-time tracking and user-friendly design.",
-    tags: ["React", "Spring Boot", "MySQL"], // change based on your actual stack
+    tags: ["React", "Spring Boot", "MySQL"],
     accent: "#fb923c", 
     live: "#",
     code: "https://github.com/ThasuniInduma/food-delivery-app",
@@ -127,7 +127,7 @@ const projects = [
   category: "Mobile Application",
   type: "mobile",
   desc: "A Flutter-based personal finance application for tracking income, expenses, and managing budgets with a clean and intuitive user interface. (Ongoing project)",
-  tags: ["Flutter", "Dart", "Firebase"], // update if different
+  tags: ["Flutter", "Dart", "Firebase"],
   accent: "#5eadf7",
   live: "#",
   code: "https://github.com/ThasuniInduma/cashpilot_money_controller_app",
@@ -215,6 +215,7 @@ export default function Projects() {
           justify-content: center;
           gap: 6px;
           margin-bottom: 3rem;
+          flex-wrap: wrap;
         }
         .filter-pill {
           display: inline-flex;
@@ -427,6 +428,60 @@ export default function Projects() {
           box-shadow: 0 0 12px rgba(94,173,247,0.5);
         }
         .page-dot:hover:not(.active) { background: rgba(94,173,247,0.4); transform: scale(1.2); }
+
+        /* ── RESPONSIVE BREAKPOINTS ── */
+
+        /* Laptop (1025px – 1279px): keep 3 cols but tighter */
+        @media (max-width: 1279px) and (min-width: 1025px) {
+          .proj-page { gap: 16px; }
+          .card-img-wrap { height: 140px; }
+        }
+
+        /* Tablet landscape (769px – 1024px): 2 columns */
+        @media (max-width: 1024px) {
+          .proj-page {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 16px;
+          }
+          .card-img-wrap { height: 150px; }
+        }
+
+        /* Tablet portrait (481px – 768px): 2 columns, smaller cards */
+        @media (max-width: 768px) {
+          .proj-page {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 14px;
+          }
+          .card-img-wrap { height: 130px; }
+          .card-body { padding: 12px 13px 14px; }
+          .card-title { font-size: 0.9rem; }
+          .card-desc { font-size: 0.82rem; }
+          .filter-divider { display: none; }
+          .proj-filter-bar { gap: 8px; }
+        }
+
+        /* Mobile (up to 480px): single column */
+        @media (max-width: 480px) {
+          .proj-page {
+            grid-template-columns: 1fr !important;
+            gap: 14px;
+          }
+          .card-img-wrap { height: 180px; }
+          .card-body { padding: 14px 14px 16px; }
+          .card-title { font-size: 0.95rem; }
+          .card-desc { font-size: 0.85rem; }
+          .proj-filter-bar { gap: 6px; margin-bottom: 2rem; }
+          .filter-pill { padding: 7px 13px; font-size: 0.68rem; }
+          .nav-arrow { width: 40px; height: 40px; }
+          .proj-controls { gap: 14px; margin-top: 24px; }
+        }
+
+        /* Very small phones (< 360px) */
+        @media (max-width: 359px) {
+          .proj-page { gap: 12px; }
+          .card-img-wrap { height: 160px; }
+          .filter-pill { padding: 6px 10px; font-size: 0.65rem; gap: 5px; }
+        }
       `}</style>
 
       <section id="projects" style={{ padding: ' 5%', maxWidth: '1400px', margin: '0 auto' }}>

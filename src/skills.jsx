@@ -478,6 +478,108 @@ export default function SkillsSection() {
           from { opacity:0; transform:translateY(12px); }
           to { opacity:1; transform:translateY(0); }
         }
+
+        /* ── FILTER BAR (reused from projects) ── */
+        .proj-filter-bar {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 6px;
+          flex-wrap: wrap;
+        }
+        .filter-pill {
+          display: inline-flex; align-items: center; gap: 7px;
+          padding: 9px 18px; border-radius: 100px;
+          font-size: 0.72rem; font-weight: 600; letter-spacing: 0.04em;
+          cursor: pointer; border: 1px solid rgba(255,255,255,0.08);
+          background: rgba(255,255,255,0.03); color: #4e6070;
+          transition: all 0.25s cubic-bezier(.22,1,.36,1);
+          outline: none; position: relative; overflow: hidden;
+          font-family: 'Sora', sans-serif;
+        }
+        .filter-pill::before {
+          content: ''; position: absolute; inset: 0;
+          background: linear-gradient(135deg, #5eadf720, #3b82f610);
+          opacity: 0; transition: opacity 0.25s;
+        }
+        .filter-pill:hover:not(.active) { border-color: rgba(94,173,247,0.25); color: #94a3b8; transform: translateY(-1px); }
+        .filter-pill:hover:not(.active)::before { opacity: 1; }
+        .filter-pill.active {
+          background: linear-gradient(135deg, rgba(94,173,247,0.18), rgba(59,130,246,0.12));
+          border-color: rgba(94,173,247,0.45); color: #7dc4ff;
+          box-shadow: 0 0 20px rgba(94,173,247,0.18), inset 0 1px 0 rgba(255,255,255,0.06);
+        }
+        .filter-pill-dot {
+          width: 6px; height: 6px; border-radius: 50%; background: currentColor;
+          opacity: 0; transform: scale(0);
+          transition: all 0.25s cubic-bezier(.22,1,.36,1); flex-shrink: 0;
+        }
+        .filter-pill.active .filter-pill-dot { opacity: 1; transform: scale(1); }
+        .filter-divider {
+          width: 1px; height: 20px;
+          background: rgba(255,255,255,0.07); margin: 0 2px; flex-shrink: 0;
+        }
+
+        /* ── SKILLS GRID ── */
+        .skills-grid {
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
+          gap: 16px;
+        }
+        .skills-col-7 { grid-column: span 7; }
+        .skills-col-5 { grid-column: span 5; }
+
+        /* ── EDUCATION NODE ── */
+        .edu-header-row {
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+          gap: 12px;
+          margin-bottom: 8px;
+        }
+
+        /* ── RESPONSIVE BREAKPOINTS ── */
+
+        /* Laptop (1025px – 1279px): keep layout, tighter padding */
+        @media (max-width: 1279px) and (min-width: 1025px) {
+          .skills-col-7 { grid-column: span 7; }
+          .skills-col-5 { grid-column: span 5; }
+        }
+
+        /* Tablet landscape (769px – 1024px): 2 equal columns */
+        @media (max-width: 1024px) {
+          .skills-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 14px; }
+          .skills-col-7 { grid-column: span 1 !important; }
+          .skills-col-5 { grid-column: span 1 !important; }
+        }
+
+        /* Tablet portrait (481px – 768px): 2 columns, smaller section padding */
+        @media (max-width: 768px) {
+          #skills { padding: 5rem 5% 6rem !important; }
+          .skills-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 12px; }
+          .skills-col-7 { grid-column: span 1 !important; }
+          .skills-col-5 { grid-column: span 1 !important; }
+          .filter-divider { display: none; }
+          .proj-filter-bar { gap: 8px; }
+          .edu-header-row { flex-direction: column; gap: 8px; align-items: flex-start; }
+        }
+
+        /* Mobile (up to 480px): single column */
+        @media (max-width: 480px) {
+          #skills { padding: 4rem 4% 5rem !important; }
+          .skills-grid { grid-template-columns: 1fr !important; gap: 12px; }
+          .skills-col-7 { grid-column: span 1 !important; }
+          .skills-col-5 { grid-column: span 1 !important; }
+          .filter-pill { padding: 7px 13px; font-size: 0.68rem; }
+          .proj-filter-bar { gap: 6px; }
+          .edu-header-row { flex-direction: column; gap: 8px; align-items: flex-start; }
+        }
+
+        /* Very small phones (< 360px) */
+        @media (max-width: 359px) {
+          #skills { padding: 3.5rem 4% 4rem !important; }
+          .filter-pill { padding: 6px 10px; font-size: 0.65rem; gap: 5px; }
+        }
       `}</style>
 
       {/* Orbs */}
@@ -546,19 +648,17 @@ export default function SkillsSection() {
         {/* SKILLS TAB */}
         {activeTab === 'skills' && (
           <div style={{ animation:'tabSlide 0.45s cubic-bezier(0.16,1,0.3,1) both' }}>
-            <div style={{
-              display:'grid', gridTemplateColumns:'repeat(12, 1fr)', gap:16,
-            }}>
-              <div style={{ gridColumn:'span 7' }}>
+            <div className="skills-grid">
+              <div className="skills-col-7">
                 <Panel catName={catEntries[0][0]} cat={catEntries[0][1]} panelIndex={0} visible={inView} />
               </div>
-              <div style={{ gridColumn:'span 5' }}>
+              <div className="skills-col-5">
                 <Panel catName={catEntries[1][0]} cat={catEntries[1][1]} panelIndex={1} visible={inView} />
               </div>
-              <div style={{ gridColumn:'span 5' }}>
+              <div className="skills-col-5">
                 <Panel catName={catEntries[2][0]} cat={catEntries[2][1]} panelIndex={2} visible={inView} />
               </div>
-              <div style={{ gridColumn:'span 7' }}>
+              <div className="skills-col-7">
                 <Panel catName={catEntries[3][0]} cat={catEntries[3][1]} panelIndex={3} visible={inView} />
               </div>
             </div>

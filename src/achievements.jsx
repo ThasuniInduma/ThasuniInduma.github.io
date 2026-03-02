@@ -314,6 +314,57 @@ export default function Achievements() {
         .glow-border {
           animation: glowPulse 3s ease-in-out infinite;
         }
+
+        /* ── CAROUSEL GRID ── */
+        .ach-carousel-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 4rem;
+          align-items: center;
+          margin-bottom: 4rem;
+        }
+
+        /* ── RESPONSIVE BREAKPOINTS ── */
+
+        /* Laptop (1025px – 1279px): tighten gap */
+        @media (max-width: 1279px) and (min-width: 1025px) {
+          .ach-carousel-grid { gap: 2.5rem; }
+        }
+
+        /* Tablet landscape (769px – 1024px): 2 cols, smaller gap */
+        @media (max-width: 1024px) {
+          .ach-carousel-grid { gap: 2rem; }
+          #achievements { padding: 5rem 5% 6rem !important; }
+        }
+
+        /* Tablet portrait (481px – 768px): stack vertically */
+        @media (max-width: 768px) {
+          .ach-carousel-grid {
+            grid-template-columns: 1fr !important;
+            gap: 2rem;
+          }
+          #achievements { padding: 4rem 5% 5rem !important; }
+          .ach-info-panel { padding-left: 0 !important; }
+        }
+
+        /* Mobile (up to 480px): single column, tighter padding */
+        @media (max-width: 480px) {
+          .ach-carousel-grid {
+            grid-template-columns: 1fr !important;
+            gap: 1.5rem;
+          }
+          #achievements { padding: 3.5rem 4% 4rem !important; }
+          .ach-info-panel { padding-left: 0 !important; gap: 1.2rem !important; }
+          .nav-btn { width: 38px; height: 38px; }
+          .ach-section-header { margin-bottom: 3rem !important; }
+        }
+
+        /* Very small phones (< 360px) */
+        @media (max-width: 359px) {
+          #achievements { padding: 3rem 4% 3.5rem !important; }
+          .ach-info-panel { gap: 1rem !important; }
+          .nav-btn { width: 34px; height: 34px; }
+        }
       `}</style>
 
       <section
@@ -329,7 +380,7 @@ export default function Achievements() {
       >
 
         {/* ── Section Header ── */}
-        <div style={{ marginBottom: '5rem' }}>
+        <div className="ach-section-header" style={{ marginBottom: '5rem' }}>
           <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'center', flexWrap: 'wrap', gap: 16 }}>
             <h2 style={{
               margin: 0,
@@ -348,7 +399,7 @@ export default function Achievements() {
         </div>
 
         {/* ── Main Carousel ── */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center', marginBottom: '4rem' }}>
+        <div className="ach-carousel-grid">
 
           {/* LEFT: Image panel — fixed-size frame */}
           <div style={{ position: 'relative' }}>
@@ -422,7 +473,7 @@ export default function Achievements() {
           </div>
 
           {/* RIGHT: Info */}
-          <div key={`info-${active}`} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '1.6rem', paddingLeft: '0.5rem' }}>
+          <div key={`info-${active}`} className="ach-info-panel" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '1.6rem', paddingLeft: '0.5rem' }}>
 
             {/* Rank + title + org */}
             <div className="reveal-1">
