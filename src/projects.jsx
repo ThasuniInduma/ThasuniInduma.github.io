@@ -115,7 +115,7 @@ const projects = [
     category: "Web Application",
     type: "web",
     desc: "Built a responsive food ordering platform with real-time tracking and user-friendly design.",
-    tags: ["React", "Spring Boot", "MySQL"],
+    tags: ["React", "JavaScript", "CSS"],
     accent: "#fb923c", 
     live: "#",
     code: "https://github.com/ThasuniInduma/food-delivery-app",

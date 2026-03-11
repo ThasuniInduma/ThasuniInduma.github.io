@@ -40,7 +40,7 @@ const SKILLS = {
       { name: 'REST APIs',   icon: null },
     ]
   },
-  'Data & Tools': {
+  'Databases & Tools': {
     color: '#fb923c', bg: 'rgba(251,146,60,0.07)', border: 'rgba(251,146,60,0.18)',
     glyph: '◉',
     items: [
@@ -49,6 +49,9 @@ const SKILLS = {
       { name: 'MongoDB',    icon: `${CDN}/mongodb/mongodb-original.svg` },
       { name: 'Firebase',   icon: `${CDN}/firebase/firebase-original.svg` },
       { name: 'Git',        icon: `${CDN}/git/git-original.svg` },
+      { name: 'GitHub',     icon: `${CDN}/github/github-original.svg` },
+      { name: 'Postman',    icon: `${CDN}/postman/postman-original.svg` },
+      { name: 'Figma',      icon: `${CDN}/figma/figma-original.svg` },
     ]
   },
 }
