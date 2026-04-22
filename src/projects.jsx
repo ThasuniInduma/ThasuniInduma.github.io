@@ -14,7 +14,19 @@ import p11 from './assets/p11.png';
 
 const projects = [
   {
-    id: 3,
+    id: 1,
+    name: "Plantation Task Manager",
+    category: "Management Platform",
+    type: "web",
+    desc: "Centralized task and workforce management system with role-based access control and reporting.",
+    tags: ["React", "Node.js", "Express", "MySQL", "JWT"],
+    accent: "#34d399",
+    live: "#",
+    code: "https://github.com/ThasuniInduma/plantro_plantation_task_management_web",
+    img: p4
+  },
+  {
+    id: 2,
     name: "QuizHub",
     category: "Distributed System",
     type: "web",
@@ -26,7 +38,7 @@ const projects = [
     img: p1
   },
   {
-    id: 2,
+    id: 3,
     name: "Point of Sales System",
     category: "Full-Stack Web App",
     type: "web",
@@ -36,18 +48,6 @@ const projects = [
     live: "#",
     code: "https://github.com/ThasuniInduma/pos-frontend",
     img: p2
-  },
-  {
-    id: 1,
-    name: "Plantation Task Manager",
-    category: "Management Platform",
-    type: "web",
-    desc: "Centralized task and workforce management system with role-based access control and reporting.",
-    tags: ["React", "Node.js", "Express", "MySQL", "JWT"],
-    accent: "#34d399",
-    live: "#",
-    code: "https://github.com/ThasuniInduma/plantro_plantation_task_management_web",
-    img: p4
   },
   {
     id: 4,
