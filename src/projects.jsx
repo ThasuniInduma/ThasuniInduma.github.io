@@ -14,7 +14,7 @@ import p11 from './assets/p11.png';
 
 const projects = [
   {
-    id: 1,
+    id: 3,
     name: "QuizHub",
     category: "Distributed System",
     type: "web",
@@ -38,7 +38,7 @@ const projects = [
     img: p2
   },
   {
-    id: 3,
+    id: 1,
     name: "Plantation Task Manager",
     category: "Management Platform",
     type: "web",
@@ -46,7 +46,7 @@ const projects = [
     tags: ["React", "Node.js", "Express", "MySQL", "JWT"],
     accent: "#34d399",
     live: "#",
-    code: "#",
+    code: "https://github.com/ThasuniInduma/plantro_plantation_task_management_web",
     img: p4
   },
   {
