@@ -3,6 +3,9 @@ import a1 from './assets/a1.jpeg';
 import a2 from './assets/a2.jpg';
 import a3 from './assets/a3.jpg';
 import a4 from './assets/a4.jpg';
+import a5 from './assets/a5.jpeg';
+import a6 from './assets/a6.png';
+
 
 const BLUE      = '#5eadf7'
 const BLUE_DIM  = 'rgba(94,173,247,0.08)'
@@ -20,7 +23,7 @@ const achievements = [
     color: BLUE,
     colorDim: BLUE_DIM,
     colorGlow: BLUE_GLOW,
-    desc: "Led the team to victory in this sustainability-focused hackathon, developing an innovative solution addressing UN Sustainable Development Goals — demonstrating technical skill, creativity, and social impact.",
+    desc: "Made the team to victory in this sustainability-focused hackathon, developing an innovative solution addressing UN Sustainable Development Goals — demonstrating technical skill, creativity, and social impact.",
     tags: ["Hackathon", "Winner", "SDGs", "Innovation"],
     img: a1,
   },
@@ -65,6 +68,34 @@ const achievements = [
     desc: "Achieved a top 10 finalist position in this student hackathon, highlighting coding skills, innovation, and collaborative problem-solving across real-world software engineering challenges.",
     tags: ["Student Hackathon", "Top 10", "SESA", "Finalist"],
     img: a4,
+  },
+  {
+    id: 5,
+    rank: "Top 10 Finalists",
+    rankNum: "05",
+    event: "Hack Like a Girl 3.0",
+    org: "SLASSCOM ",
+    year: "2026",
+    color: BLUE,
+    colorDim: BLUE_DIM,
+    colorGlow: BLUE_GLOW,
+    desc: "Achieved a top 10 finalist position in this student hackathon, highlighting coding skills, innovation, and collaborative problem-solving across real-world software engineering challenges.",
+    tags: ["Student Hackathon", "Top 10", "SLASSCOM", "Finalist"],
+    img: a5,
+  },
+  {
+    id: 6,
+    rank: "Top 10 Finalists",
+    rankNum: "06",
+    event: "KelaniXtreme 2025",
+    org: "IEEE Student Branch of the University of Kelaniya",
+    year: "2025",
+    color: BLUE,
+    colorDim: BLUE_DIM,
+    colorGlow: BLUE_GLOW,
+    desc: "Led the team to achieved a top 10 finalist position in this student hackathon, highlighting coding skills, innovation, and collaborative problem-solving across real-world software engineering challenges.",
+    tags: ["Student Hackathon", "Top 10", "IEEE", "Finalist"],
+    img: a6,
   },
 ]
 

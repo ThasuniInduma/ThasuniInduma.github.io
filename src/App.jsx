@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import profileImg from './assets/me.png';
-import cv from './assets/Thasuni cv.pdf';
+import cv from './assets/Thasuni Induma - Software Engineer Intern CV.PDF';
 import Skills from './skills';
 import Projects from './projects';
 import Achivements from './achievements';
